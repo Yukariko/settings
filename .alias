@@ -2,6 +2,6 @@ alias agi='apt-get install'
 alias ls='ls -a'
 alias lsl='ls -al'
 alias ps='ps -ef'
-
+alias ncore='cat /proc/cpuinfo | grep -c "processor"'
 mmv() { find . -maxdepth 1 -name "*$old" -exec sh -c 'mv "$1" "${1%$2}$3"' _ {} $1 $2 \; }
 
