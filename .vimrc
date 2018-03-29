@@ -291,3 +291,6 @@ if empty($TMUX) && empty($STY)
 endif
 
 colorscheme open-color
+
+" Setting by kangmin 
+set pastetoggle=<F3>
