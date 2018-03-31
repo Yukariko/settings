@@ -2,6 +2,7 @@
 
 # vim settings
 ln -sfn `pwd`/.vimrc ~/.vimrc
+vim -c PlugInstall -c q -c q
 
 # tmux settings
 ln -sfn `pwd`/.tmux.conf ~/.tmux.conf
