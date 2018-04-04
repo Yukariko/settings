@@ -73,6 +73,8 @@ Plug 'vim-scripts/vim-eco'
 "Plug 'vim-scripts/Raimondi/delimitMate'
 " ANSI escape
 Plug 'vim-scripts/AnsiEsc.vim', { 'for': 'railslog' }
+Plug 'dag/vim-fish'
+
 
 if has('mac') || has('macunix')
   " Add plist editing support to Vim
