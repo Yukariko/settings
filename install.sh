@@ -21,4 +21,5 @@ brew install fish
 curl -L https://get.oh-my.fish | fish
 ln -sfn `pwd`/fish/fish_prompt.fish  ~/.local/share/omf/themes/default/fish_prompt.fish
 ln -sfn `pwd`/fish/key_bindings.fish ~/.config/omf/key_bindings.fish
+ln -sfn `pwd`/fish/init.fish ~/.config/omf/init.fish
 omf reload
