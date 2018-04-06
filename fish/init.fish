@@ -3,11 +3,11 @@ function agi
 end
 
 function l
-    /bin/ls -a $argv
+    ls -a $argv
 end
 
 function lsl
-    /bin/ls -al $argv
+    ls -al $argv
 end
 
 function ps
