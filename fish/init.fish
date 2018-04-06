@@ -2,7 +2,7 @@ function agi
     apt-get install $argv
 end
 
-function ls
+function l
     /bin/ls -a $argv
 end
 
