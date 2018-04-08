@@ -37,4 +37,5 @@ then
     chsh -s "$PATH_FISH"
     fish -c "set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCa"
     fish -c "omf reload"
+    ./dircolors
 fi
