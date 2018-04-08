@@ -40,6 +40,7 @@ endfunction
 
 call s:download_vim_plug()
 
+Plug 'scrooloose/nerdtree'
 Plug 'yous/vim-open-color'
 Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/taglist.vim'
