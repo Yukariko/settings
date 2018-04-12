@@ -37,13 +37,13 @@ then
 elif [ "$shell" = "fish" ]
 then
     # fish shell settings
-	if [ "$machine" == "Mac"]
+	if [ "$machine" == "Mac" ]
 	then
 	    brew install fish
 	else
 		sudo add-apt-repository ppa:fish-shell/release-2
 		sudo apt-get update
-		sudo apt-get -y install fish
+		sudo apt-get -y install fish ctags
 	fi
     curl -L https://get.oh-my.fish | fish
     ln -sfn `pwd`/fish/fish_prompt.fish  ~/.local/share/omf/themes/default/fish_prompt.fish
