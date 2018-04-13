@@ -1,3 +1,5 @@
+set TERM xterm-256color
+
 function agi
     apt-get install $argv
 end
@@ -26,3 +28,6 @@ function mmv
     find . -maxdepth 1 -name "*$argv[1]" -exec bash -c 'mv "$1" "${1%$2}$3"' _ "{}" $argv[1] $argv[2] \;
 end
 
+function apt-get
+    sudo apt-get $argv
+end
