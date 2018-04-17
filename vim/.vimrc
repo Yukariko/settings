@@ -40,6 +40,7 @@ endfunction
 
 call s:download_vim_plug()
 
+Plug 'rust-lang/rust.vim'
 Plug 'jwalton512/vim-blade'
 Plug 'scrooloose/nerdtree'
 Plug 'yous/vim-open-color'
@@ -85,7 +86,7 @@ endif
 call plug#end()
 "vim-eunuch AutoComplPopup pythoncomplete rubycomplete
 
-set bg=dark " background를 dark로 설정한다
+"set bg=dark " background를 dark로 설정한다
 syntax enable
 set ai "set autoindent
 set ts=4
@@ -293,7 +294,7 @@ if empty($TMUX) && empty($STY)
   endif
 endif
 
-colorscheme open-color
+"colorscheme open-color
 
 " Setting by kangmin 
 set pastetoggle=<F3>
