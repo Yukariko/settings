@@ -31,3 +31,8 @@ end
 function apt-get
     sudo apt-get $argv
 end
+
+function akill
+    sudo kill -9 (ps -ef | grep "$argv" | awk "{print \$2}")
+end
+
