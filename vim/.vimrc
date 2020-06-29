@@ -76,7 +76,8 @@ Plug 'Raimondi/delimitMate'
 " ANSI escape
 Plug 'vim-scripts/AnsiEsc.vim', { 'for': 'railslog' }
 Plug 'dag/vim-fish'
-
+Plug 'sainnhe/sonokai'
+Plug 'bluz71/vim-nightfly-guicolors'
 
 if has('mac') || has('macunix')
   " Add plist editing support to Vim
@@ -141,6 +142,9 @@ autocmd FileType ruby set omnifunc=rubycomplete#Complete
 "autocmd FileType ruby let g:rubycomplete_buffer_loading=1
 "autocmd FileType ruby let g:rubycomplete_classes_in_global=1
 autocmd FileType python set omnifunc=pythoncomplete#Complete " python completion
+
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 map <silent> <F7> :make<CR>:bo cw 5<CR> "set F7 to make & show compile error
 imap <silent> <F7> <C-c>:make<CR>:bo cw 5<CR>
@@ -233,7 +237,15 @@ nnoremap g#  g#z
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
-colorscheme desert
+" This is only necessary if you use "set termguicolors".
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" fixes glitch? in colors when using vim with tmux
+set background=dark
+set t_Co=256
+set termguicolors
+colorscheme miramare
 
 let g:xml_use_xhtml = 1
 
@@ -290,7 +302,6 @@ if empty($TMUX) && empty($STY)
   " <https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd>
   " <https://github.com/neovim/neovim/wiki/Following-HEAD#20160511>
   if has('termguicolors')
-    set termguicolors
   endif
 endif
 
